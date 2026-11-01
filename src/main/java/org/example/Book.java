@@ -1,7 +1,7 @@
 package org.example;
 import java.util.Objects;
 
-public  class Book implements Comparable<Book> {
+public final class Book implements Comparable<Book> {
 
 
     private final String title;

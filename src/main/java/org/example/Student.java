@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-public  class Student {
+public final class Student {
 
     private final String name;
     private final List<Book> books;
@@ -17,7 +17,7 @@ public  class Student {
         }
 
         this.name = name;
-        this.books = books;
+        this.books = List.copyOf(books);
 
     }
 
@@ -26,7 +26,7 @@ public  class Student {
     }
 
     public List<Book> getBooks() {
-        return books;
+        return List.copyOf(books);
     }
 
     @Override
